@@ -1,0 +1,21 @@
+// LAB 1 - VARIACIÓN: Parpadeo con patrón SOS (Morse) 
+ 
+const int LED = 13; 
+ 
+void dot()   { digitalWrite(LED,HIGH); delay(200); digitalWrite(LED,LOW); 
+delay(200); } 
+void dash()  { digitalWrite(LED,HIGH); delay(600); digitalWrite(LED,LOW); 
+delay(200); } 
+void space() { delay(600); } 
+ 
+void setup() { pinMode(LED, OUTPUT); } 
+ 
+void loop() { 
+  // S = ... 
+  dot(); dot(); dot(); space(); 
+  // O = --- 
+  dash(); dash(); dash(); space(); 
+  // S = ... 
+dot(); dot(); dot(); 
+delay(2000)
+}

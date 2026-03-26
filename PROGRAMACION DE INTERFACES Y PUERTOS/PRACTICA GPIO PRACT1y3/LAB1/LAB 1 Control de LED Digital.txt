@@ -1,0 +1,19 @@
+// LAB 1: Control de LED Digital 
+// Programa clásico Blink 
+ 
+const int LED_PIN = 13;   // Pin donde conectamos el LED 
+ 
+void setup() { 
+  pinMode(LED_PIN, OUTPUT);   // Configurar pin como salida 
+  Serial.begin(9600);          // Iniciar comunicación serial 
+} 
+ 
+void loop() { 
+  digitalWrite(LED_PIN, HIGH); // Encender LED 
+  Serial.println("LED: ON"); 
+  delay(1000);                 // Esperar 1 segundo 
+ 
+  digitalWrite(LED_PIN, LOW);  // Apagar LED 
+  Serial.println("LED: OFF"); 
+  delay(1000);                 // Esperar 1 segundo 
+}
